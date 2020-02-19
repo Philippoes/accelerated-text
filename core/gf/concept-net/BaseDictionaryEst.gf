@@ -19,10 +19,12 @@ resource BaseDictionaryEst = open ResEst, ParadigmsEst, SyntaxEst, UtilsEst in {
     fridge : CN =  mkCN (mkN "külmik");
     door: CN =  mkCN (mkN "uks");
     steel : CN =  mkCN (mkN "terasest");
-    wood : CN =  mkCN (mkN "puit");
     removable_filter : CN = mkCN (mkN "eemaldatav filter");
     package : CN = mkCN (mkN "pakett");
     interior_use : CN = mkCN (mkN "siseruumides kasutamiseks");
+    fast_boiling : CN = mkCN (mkN "kiire keetmine");
+    power : CN = mkCN (mkN "W");
+    lock : CN = mkCN (mkN "lukk");
 
     easy_N : N = mkN "lihtne";
 
@@ -32,6 +34,8 @@ resource BaseDictionaryEst = open ResEst, ParadigmsEst, SyntaxEst, UtilsEst in {
     fast : A = (mkA "kiire");
     small : A = (mkA "väike");
     regular : A = (mkA "regulaarne");
+    modern_design : A = (mkA "kaasaegne disain");
+    wood : A =  (mkA "puit");
 
     make : V2 = mkV2 (mkV "tegema");
 

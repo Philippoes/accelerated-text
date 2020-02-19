@@ -8,11 +8,12 @@
             [clojure.tools.logging :as log]))
 
 (def dictionary #{"allows"  "removable_filter"  "auto_switch"  "standard"
-                  "this" "safe_peration" "cleaning" "water" "fridge"
+                  "this" "safe_operation" "cleaning" "water" "fridge"
                   "small" "low_power" "of_Prep" "make" "toaster"
                   "fast" "suitable" "with_Prep" "steel" "regular" "kitchen"
                   "t1000" "kettle" "average_size" "features" "easy_N"
-                  "includes" "package"})
+                  "includes" "package" "wood" "door" "interior_use"
+                  "fast_boiling" "modern_design" "power"})
 (defn s-ret? [ret] (coll? ret))
 
 (defn f-param? [function-name] (str/starts-with? function-name "Amr"))

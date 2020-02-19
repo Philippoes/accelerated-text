@@ -19,10 +19,12 @@ resource BaseDictionaryEng = open ParadigmsEng, SyntaxEng, UtilsEng in {
   fridge : CN =  mkCN (mkN "fridge");
   door: CN =  mkCN (mkN "door");
   steel : CN =  mkCN (mkN "steel");
-  wood : CN =  mkCN (mkN "wood");
   removable_filter : CN = mkCN (mkN "removable filter");
   package : CN = mkCN (mkN "package");
   interior_use : CN = mkCN (mkN "interior use");
+  fast_boiling : CN = mkCN (mkN "fast boiling");
+  power : CN = mkCN (mkN "W");
+  lock : CN = mkCN (mkN "lock");
 
   easy_N : N = mkN "easy";
 
@@ -32,6 +34,8 @@ resource BaseDictionaryEng = open ParadigmsEng, SyntaxEng, UtilsEng in {
   fast : A = (mkA "fast");
   small : A = (mkA "small");
   regular : A = (mkA "regular");
+  modern_design : A = (mkA "modern design");
+  wood : A =  (mkA "wood");
 
   make : V2 = mkV2 (mkV "make" "made" "made");
 

@@ -10,7 +10,5 @@ resource IncludesEst = open ParadigmsEst, SyntaxEst, UtilsEst, BaseDictionaryEst
          (mkCl
             (mkNP the_Det package)
             includes
-            (mkNP
-               (mkCN (mkInAdv subject a_Det))
-               a_Det subject)));
+            (mkNP a_Det subject)));
 }

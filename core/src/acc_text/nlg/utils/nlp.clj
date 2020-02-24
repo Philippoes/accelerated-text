@@ -2,16 +2,16 @@
   (:require [clojure.string :as str]))
 
 (defn split-into-sentences [s]
-  (str/split s #"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s"))
+  (str/split s #"(?<![\p{L}\p{N}]\.[\p{L}\p{N}].)(?<![A-Z][a-z]\.)(?<=\.|\?)\s"))
 
 (defn tokenize [s]
-  (map first (re-seq #"((\w+[.,-_ÄäÖöÜü]\w+)|(:(\w|[_-])+:)|(\{\{(\w|[_-])+\}\})|([\w+'`]+|[^\s\w+'`]+))" s)))
+  (map first (re-seq #"(([\p{L}\p{N}][.,-_][\p{L}\p{N}]+)|(:([\p{L}\p{N}]|[_-])+:)|(\{\{([\p{L}\p{N}]|[_-])+\}\})|([\p{L}\p{N}'`]+|[^\s\p{L}\p{N}'`]+))" s)))
 
 (defn tokenize-incl-space [s]
-  (map first (re-seq #"([\w+'`]+|[\s]+|[^\s\w+'`]+)" s)))
+  (map first (re-seq #"([\p{L}\p{N}'`]+|[\s]+|[^\s\p{L}\p{N}'`]+)" s)))
 
 (defn word? [s]
-  (some? (re-seq #"\w" s)))
+  (some? (re-seq #"[\p{L}\p{N}]" s)))
 
 (defn ends-with-s? [token] (= "s" (str (last token))))
 
